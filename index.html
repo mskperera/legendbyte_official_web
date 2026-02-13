@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendbyte | Affordable Cloud POS & Custom Software Development</title>
+  <meta name="description" content="Discover affordable cloud POS systems and custom software solutions tailored to your business needs. Simplify operations, protect the planet, and enjoy reasonable prices for technology that brings harmony to your workday." />
+  
+  <meta property="og:title" content="Affordable Cloud POS Systems & Custom Software Solutions" />
+<meta property="og:description" content="Build custom software or get a cloud-based POS at reasonable prices. Technology that simplifies your world and fits your budget." />
+<meta property="og:image" content="https://legendbyte.com/path/to/hero-image.png" /> <!-- Replace with your PNG URL; aim for 1200x630px -->
+<meta property="og:url" content="https://legendbyte.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Legendbyte" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --coral-red: #FF6B6B;
+            --bright-blue: #185c9a;
+            --sunny-yellow: #FFD93D;
+            --nature-green: #185c9a;
+            --leaf-green: #185c9a;
+            --dark-bg: #1a1a2e;
+            --light-bg: #f8f9fa;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--nature-green);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--nature-green), var(--bright-blue));
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section - REDESIGNED */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgb(24 92 154 / 0%), rgb(74 160 226 / 8%));
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated nature elements */
+        /* .hero::before {
+            content: '🌿';
+            position: absolute;
+            top: 15%;
+            right: 8%;
+            font-size: 3rem;
+            opacity: 0.4;
+            animation: float 4s ease-in-out infinite;
+        } */
+         .hero::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    
+    width: 60px;   /* adjust size */
+    height: 60px;
+
+    background-image: url('./assets/images/satelite.png'); /* your png file */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.4;
+    animation: float 4s ease-in-out infinite;
+}
+
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            font-size: 2.5rem;
+
+
+    width: 60px;   /* adjust size */
+    height: 60px;
+
+    background-image: url('./assets/images/butterfly.gif'); /* your png file */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+
+            opacity: 0.3;
+            animation: flutter 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        @keyframes flutter {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, -10px) rotate(5deg); }
+            50% { transform: translate(20px, 0) rotate(-5deg); }
+            75% { transform: translate(10px, 10px) rotate(5deg); }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .hero-content .highlight {
+            background:#185c9a;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: var(--nature-green);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-vision {
+            background: rgba(124, 179, 66, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--nature-green);
+            margin-bottom: 2rem;
+        }
+
+        .hero-vision p {
+            margin: 0;
+            font-style: italic;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--nature-green), var(--leaf-green));
+            color: var(--white);
+             box-shadow: 0 4px 15px rgba(66, 117, 179, 0.3); 
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(66, 124, 179, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--bright-blue);
+            border: 2px solid var(--bright-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bright-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* New Hero Illustration */
+        .hero-illustration {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-illustration svg {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 6rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-header .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            border-color: var(--nature-green);
+        }
+
+        .product-image {
+            height: 220px;
+            background: linear-gradient(135deg, var(--nature-green), var(--bright-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-image-placeholder {
+            font-size: 5rem;
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .product-content {
+            padding: 2rem;
+        }
+
+        .product-badge {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background: linear-gradient(135deg, rgba(124, 179, 66, 0.15), rgba(74, 144, 226, 0.15));
+            color: var(--nature-green);
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border: 2px solid var(--nature-green);
+        }
+
+        .product-badge.coming-soon {
+            background: rgba(255, 217, 61, 0.15);
+            color: #d4a528;
+            border-color: var(--sunny-yellow);
+        }
+
+        .product-content h3 {
+            font-size: 1.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .product-tagline {
+            font-size: 1.1rem;
+            color: var(--bright-blue);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .product-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            padding: 0.6rem 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .product-features li::before {
+            content: '🌱';
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .product-footer {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* Custom Development Section */
+        .custom-dev {
+            background: linear-gradient(135deg, rgb(54 145 228 / 6%), rgba(74, 144, 226, 0.05))
+        }
+
+        .services-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border-left: 5px solid var(--nature-green);
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .service-card:nth-child(even) {
+            border-left-color: var(--bright-blue);
+        }
+
+        .service-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .process-section {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .process-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--text-dark);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--nature-green), var(--bright-blue));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .process-step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .pricing-box {
+            background: linear-gradient(135deg, var(--nature-green), var(--bright-blue));
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .pricing-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .pricing-item {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .pricing-item strong {
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .profile-icon {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, var(--nature-green), var(--bright-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .profile-icon i {
+            font-size: 8rem;
+            color: var(--white);
+        }
+
+        .about-image h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .about-image p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .mission-box {
+            background: #97ffce;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--nature-green);
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .mission-box::before {
+            content: '🌍';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .mission-box h4 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .mission-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .value-item p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, rgba(124, 179, 66, 0.05), rgba(74, 144, 226, 0.05));
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .contact-info > p {
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .contact-method:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .email-icon { background: #DB4437; }
+        .whatsapp-icon { background: #25D366; }
+        .clock-icon { background: #4A90E2; }
+
+        .contact-method:hover .contact-icon {
+            transform: scale(1.1);
+        }
+
+        .contact-method-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+            color: var(--text-dark);
+        }
+
+        .contact-method-content p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .contact-method-content a {
+            color: var(--bright-blue);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .contact-method-content a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-link.whatsapp {
+            background: #25D366;
+        }
+
+        .social-link.facebook {
+            background: #1877F2;
+        }
+
+        .social-link.linkedin {
+            background: #0A66C2;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: var(--white);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--nature-green);
+            box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .budget-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .budget-option {
+            position: relative;
+        }
+
+        .budget-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .budget-option label {
+            display: block;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .budget-option input[type="radio"]:checked + label {
+            border-color: var(--nature-green);
+            background: rgba(124, 179, 66, 0.1);
+            color: var(--nature-green);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--nature-green), var(--bright-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.05rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--nature-green);
+        }
+
+        .footer-section p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .hero-illustration {
+                order: -1;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .budget-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 4rem 1.5rem;
+            }
+
+            .products-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="./assets/images/pos_logo_long.png" alt="Legendbyte" class="logo-img">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - REDESIGNED -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-tagline">
+                    <span>🌿</span> Technology in Harmony with Life
+                </p>
+                <h1>Building Software That <span class="highlight">Simplifies Your World</span></h1>
+                <p>Imagine technology that doesn't overwhelm—instead, it brings peace to your workday, protects our planet, and gives you more time for what truly matters.</p>
+                
+                <!-- <div class="hero-vision">
+                    <p>✨ I create solutions that transform heavy paperwork into simple clicks, turn chaos into calm, and use smart tech to care for all living beings—from busy humans to curious cats, chirping birds, and buzzing bees.</p>
+                </div> -->
+                
+                <p style="color: var(--text-dark); font-weight: 500;">Whether you need a ready-made product or a custom solution built just for you, let's make technology work beautifully in your life.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#contact" class="btn btn-secondary">💬 Share Your Vision</a>
+                </div>
+            </div>
+            
+      <div class="hero-illustration">
+            <img src="./assets/images/hero_banner_right2.png" alt="Hero Illustration" width="600" height="600" style="max-width: 80%; height: auto;">
+        </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>🌿 Our Software Products</h2>
+                <p class="subtitle">Ready-to-use solutions that bring simplicity and peace to your daily operations.</p>
+            </div>
+            <div class="products-grid">
+                <!-- Cloud POS -->
+                <div class="product-card fade-in">
+                    <!-- <div class="product-image">
+                        <img src="https://via.placeholder.com/400x220/7CB342/FFFFFF?text=Legend+POS" alt="Cloud POS">
+                    </div> -->
+                    <div class="product-content">
+                        <!-- <span class="product-badge">🌱 Available Now</span> -->
+                        <h3>Legend POS</h3>
+                        <p class="product-tagline">Cloud-Based Point of Sale</p>
+                        <p>Run your store stress-free from anywhere. No complicated setup, no expensive hardware—just a clean, simple system that helps you focus on your customers, not technology.</p>
+                        <!-- <ul class="product-features">
+                            <li>Process sales effortlessly</li>
+                            <li>Track inventory in real-time</li>
+                            <li>Manage customer relationships</li>
+                            <li>Access from any device, anywhere</li>
+                            <li>Works offline when you need it</li>
+                        </ul> -->
+                        <p class="product-footer">🛍️ Perfect for: Retail shops, cafes, restaurants, small businesses</p>
+                        <a href="https://clpos.legendbyte.com" target="_blank" class="btn btn-primary" style="width: 100%;text-align:center;">
+                            Start Your Free Trial →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Journal App -->
+                <div class="product-card fade-in">
+                    <!-- <div class="product-image" style="background: linear-gradient(135deg, #4A90E2, #FFD93D);">
+                        <span class="product-image-placeholder">📔</span>
+                    </div> -->
+                    <div class="product-content">
+  
+                        <h3>Vintage Journal</h3>
+                                              <span class="product-badge coming-soon">🌟 Coming Soon</span>
+                        <p class="product-tagline">Your Digital Sanctuary for Thoughts</p>
+                        <p>A peaceful space to write, reflect, and remember. No clutter, no distractions—just you and your words in a beautifully simple digital journal.</p>
+                        <!-- <ul class="product-features">
+                            <li>Beautiful, distraction-free writing</li>
+                            <li>Organize effortlessly with tags</li>
+                            <li>Find anything instantly</li>
+                            <li>Your privacy is sacred</li>
+                            <li>Sync seamlessly across devices</li>
+                        </ul> -->
+                        <p class="product-footer">✍️ Perfect for: Writers, dreamers, thinkers, anyone who values reflection</p>
+                        <a href="#contact" class="btn btn-secondary" style="width: 100%;">Notify Me at Launch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Development Section -->
+    <section class="section custom-dev" id="services">
+        <div class="section-container">
+      <div class="section-header">
+    <h2>🌍 Custom Solutions That Transform Your Work</h2>
+    <p class="subtitle">Every challenge deserves a thoughtful solution. Let's build technology that makes your life easier, not harder.</p>
+</div>
+
+<!-- <p class="services-intro">
+    ✨ <strong>A human-centered approach:</strong> I don’t just write code—I listen to your challenges and study your workflow to create tools that feel like a breath of fresh air. From digitizing manual paperwork to building high-performance systems, I’m here to give you back your most valuable resource: <strong>time</strong>.
+</p> -->
+
+<div class="services-grid">
+    <div class="service-card fade-in">
+        <div class="service-icon">🧩</div> 
+        <h3>Custom Software Development</h3>
+        <p>I build intuitive web, desktop, and mobile applications tailored to your business. Transform complex challenges into elegant digital platforms your users will actually enjoy.</p>
+    </div>
+
+    <div class="service-card fade-in">
+        <div class="service-icon">🏢</div>
+        <h3>Business Websites</h3>
+        <p>Professional, responsive websites designed to reflect your values and convert visitors into customers. Clean, modern, and engineered to grow with you.</p>
+    </div>
+
+    <div class="service-card fade-in">
+             <div class="service-icon">🔌</div>
+        <h3>Seamless System Integrations</h3>
+        <p>Make your tools talk to each other. I build secure APIs and custom integrations that sync your data automatically, so you can ditch the manual entry for good.</p>
+    </div>
+
+    <div class="service-card fade-in">
+        <div class="service-icon">☁️</div>
+        <h3>Secure Cloud Hosting</h3>
+        <p>Deploy your software on a foundation of speed and reliability. I provide managed hosting solutions that ensure your applications are fast, secure, and always online.</p>
+    </div>
+
+    <div class="service-card fade-in">
+        <div class="service-icon">🛠️</div>
+        <h3>Optimization & Maintenance</h3>
+        <p>Future-proof your technology. I offer performance optimization, SDK upgrades, and security hardening to keep your existing software running smoothly and safely.</p>
+    </div>
+
+
+
+               <!-- <div class="service-card fade-in">
+                    <div class="service-icon">🌿</div>
+                    <h3>IoT & Smart Solutions</h3>
+                    <p>Technology that cares for living beings. Smart sensors for gardens, pet monitoring, environmental protection—tech with a heart.</p>
+                </div> -->
+                
+</div>
+
+            <!-- Process -->
+            <div class="process-section">
+                <h3>🤝 How We'll Work Together</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Listen & Understand</h4>
+                        <p>Share your challenges and dreams. I'll listen carefully to truly understand what you need.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Clear Proposal</h4>
+                        <p>A simple, honest proposal in plain language. No confusing tech jargon, just clarity.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Build Together</h4>
+                        <p>Regular updates as we bring your vision to life. You'll see progress every step of the way.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Launch & Support</h4>
+                        <p>When it's ready, we launch smoothly. I'll be here to support you as you grow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing-box">
+                <h3>💚 Fair, Honest Pricing</h3>
+                <p style="margin-bottom: 1.5rem;">Every project is unique, so I'll give you a transparent quote based on what you actually need. No hidden costs, no surprises—just honest collaboration.</p>
+                <div class="pricing-items">
+                    <div class="pricing-item">
+                        <strong>Small Projects</strong>
+                        <p>Starting from $200</p>
+                    </div>
+                    <div class="pricing-item">
+                        <strong>Medium Solutions</strong>
+                        <p>$1,000 - $5,000</p>
+                    </div>
+                    <div class="pricing-item">
+                        <strong>Comprehensive Systems</strong>
+                        <p>$5,000+</p>
+                    </div>
+                </div>
+                <p><strong>Flexible payments:</strong> We'll work out a plan that respects your budget. Usually 50% to start, 50% when you're happy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="section-container">
+            <!-- <div class="section-header">
+                <h2>🌍 About Me & My Mission</h2>
+                <p class="subtitle">Hi, I'm Susantha Perera. I believe technology should serve life, not complicate it.</p>
+            </div> -->
+
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Susantha Perera</h3>
+                    <p>Founder of Legendbyte</p>
+                </div>
+
+                <div class="about-text">
+                    <!-- <h3>My Story</h3>
+                    <p>I started coding because I loved solving puzzles. But over the years, I realized something important: <strong>the best technology is the kind you don't notice</strong>—it just makes life easier.</p>
+                    
+                    <p>I've watched people drown in overcomplicated software, waste hours on paperwork that should take minutes, and struggle with tech that was supposed to help them. That didn't sit right with me.</p>
+
+                    <p>So I founded <strong>Legendbyte</strong> with a clear vision: create software that brings peace, not stress. Solutions that give you more time for what matters—whether that's growing your business, spending time with family, or simply enjoying a quiet moment.</p> -->
+
+                    <div class="mission-box">
+                        <h4>🌿 My Mission</h4>
+                        <p><strong>To create a world where technology enhances life for all living beings.</strong></p>
+                        <p style="margin-top: 1rem;">I believe technology should make life peaceful, not stressful. I build smart systems that protect our environment and care for living things. My goal is to turn messy manual work into simple, beautiful software. By automating the hard tasks, I help people spend less time on screens and more time living their lives.</p>
+                    </div>
+
+                    <!-- <p>Whether you're running a small shop in Sri Lanka or managing a global team, whether you need to simplify your inventory or protect local wildlife with smart sensors—I'm here to help make it happen.</p> -->
+                </div>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">🌱</div>
+                    <h4>Nature First</h4>
+                    <p>Every solution considers environmental impact. Tech that respects our planet and all creatures.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🕊️</div>
+                    <h4>Simplicity & Peace</h4>
+                    <p>No overwhelming features. Just clean, calm software that makes your work lighter.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">💚</div>
+                    <h4>Genuine Care</h4>
+                    <p>I treat your project like it's my own. Your success and peace of mind matter deeply to me.</p>
+                </div>
+                <!-- <div class="value-item">
+                    <div class="value-icon">🌍</div>
+                    <h4>Global Vision</h4>
+                    <p>From Sri Lanka to the world—building solutions that make life better everywhere.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>💬 Let's Create Something Beautiful Together</h2>
+                <p class="subtitle">Have a vision? A challenge? A dream? Share it with me—I'd love to hear your story.</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Whether you're across the world or down the street, I'm here to listen. Let's find a time that works for you.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon email-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-method-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:legendbyteworld@gmail.com">legendbyteworld@gmail.com</a></p>
+                                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Perfect for detailed conversations about your project</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon whatsapp-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-method-content">
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/94771147484" target="_blank">+94 77 114 7484</a></p>
+                                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Quick question? Message me directly</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon clock-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-method-content">
+                                <h4>Response Time</h4>
+                                <p>Usually within a few hours ⏰</p>
+                                <!-- <p style="font-size: 0.9rem; margin-top: 0.5rem;">Based in Sri Lanka (GMT+5:30) • Flexible for international calls</p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 2rem 0 1rem;">🌿 Connect on Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/94771147484" target="_blank" class="social-link whatsapp" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://web.facebook.com/susantha.perera.393/" target="_blank" class="social-link facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/susantha-perera-11b494119/" target="_blank" class="social-link linkedin" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text-dark);">Share Your Vision</h3>
+                    
+                    <div class="form-group">
+                        <label for="inquiry-type">How can I help? *</label>
+                        <select id="inquiry-type" required>
+                            <option value="">Choose what feels right</option>
+                            <option value="product">🌱 Interested in your products</option>
+                            <option value="custom">✨ I have a custom project idea</option>
+                            <option value="question">💭 Just exploring and have questions</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" required placeholder="What should I call you?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required placeholder="Where can I reach you?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell Me Your Story *</label>
+                        <textarea id="message" required placeholder="What challenges are you facing? What dreams do you have? I'm listening..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Budget Range (Optional—just to help me understand)</label>
+                        <div class="budget-options">
+                            <div class="budget-option">
+                                <input type="radio" id="budget1" name="budget" value="under1k">
+                                <label for="budget1">Under $1,000</label>
+                            </div>
+                            <div class="budget-option">
+                                <input type="radio" id="budget2" name="budget" value="1k-5k">
+                                <label for="budget2">$1,000 - $5,000</label>
+                            </div>
+                            <div class="budget-option">
+                                <input type="radio" id="budget3" name="budget" value="5k-10k">
+                                <label for="budget3">$5,000 - $10,000</label>
+                            </div>
+                            <div class="budget-option">
+                                <input type="radio" id="budget4" name="budget" value="10k-plus">
+                                <label for="budget4">$10,000+</label>
+                            </div>
+                            <div class="budget-option">
+                                <input type="radio" id="budget5" name="budget" value="not-sure">
+                                <label for="budget5">Not sure yet</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; position: relative;">
+                        <span id="btnText">🌿 Send Message</span>
+                        <span id="btnSpinner" style="display: none; margin-left: 10px;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+
+                    <div id="formMessage" style="display: none; padding: 1rem; margin: 1.5rem 0; border-radius: 12px; font-weight: 500; text-align: center;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Legendbyte</h3>
+                <p>Founded by Susantha Perera</p>
+                <p>🌿 Building technology in harmony with life. serving the world 🌍</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="https://clpos.legendbyte.com" target="_blank">Legend POS</a></li>
+                    <li><a href="#contact">Vintage Journal (Coming Soon)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">Custom Development</a></li>
+                    <li><a href="#services">Web & Mobile Apps</a></li>
+                    <li><a href="#services">Smart Business Systems</a></li>
+                    <li><a href="#services">IoT Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="mailto:legendbyteworld@gmail.com">📧 Email</a></li>
+                    <li><a href="https://wa.me/94771147484" target="_blank">💬 WhatsApp</a></li>
+                    <li><a href="https://web.facebook.com/susantha.perera.393/" target="_blank">📘 Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/in/susantha-perera-11b494119/" target="_blank">💼 LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>🌿 Made with love and care • © 2026 Legendbyte • Technology that serves life</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            formMessage.style.display = 'none';
+            formMessage.className = '';
+
+            btnText.textContent = 'Sending...';
+            btnSpinner.style.display = 'inline-block';
+            submitBtn.disabled = true;
+
+            const inquiryType = document.getElementById('inquiry-type').value;
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            const budgetRadio = document.querySelector('input[name="budget"]:checked');
+            const budget = budgetRadio ? budgetRadio.value : 'Not specified';
+
+            let inquiryText = 'General question';
+            if (inquiryType === 'product') inquiryText = 'Interested in products';
+            if (inquiryType === 'custom') inquiryText = 'Custom project idea';
+
+            const htmlBody = `
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
+                    <h2 style="color: #7CB342;">🌿 New Message from Legendbyte Website</h2>
+                    <p><strong>From:</strong> ${name} (${email})</p>
+                    <p><strong>Inquiry Type:</strong> ${inquiryText}</p>
+                    <p><strong>Budget Range:</strong> ${budget}</p>
+                    <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+                    <h3 style="color: #4A90E2;">Message:</h3>
+                    <p style="white-space: pre-wrap; line-height: 1.6;">${message.replace(/\n/g, '<br>')}</p>
+                    <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+                    <p style="font-size: 0.9em; color: #777;">
+                        Sent from Legendbyte website • ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' })}
+                    </p>
+                </div>
+            `;
+
+            const payload = {
+                recipientEmail: "spmskperera@gmail.com",
+                subject: `🌿 New Website Inquiry from ${name}`,
+                isHtmlBody: true,
+                messageBody: htmlBody
+            };
+
+            try {
+                const response = await fetch('https://clpos.legendbyte.com/api/notification/email/send', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Server error: ${response.status} - ${errorText}`);
+                }
+
+                formMessage.textContent = '✨ Thank you! Your message has been sent. I usually respond within a few hours.';
+                formMessage.style.backgroundColor = 'rgba(124, 179, 66, 0.1)';
+                formMessage.style.color = '#2d3436';
+                formMessage.style.border = '1px solid #7CB342';
+                formMessage.style.display = 'block';
+
+                contactForm.reset();
+
+            } catch (error) {
+                console.error('Submission error:', error);
+
+                formMessage.textContent = '😔 Sorry, there was a problem. Please message me directly on WhatsApp: +94 77 114 7484';
+                formMessage.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
+                formMessage.style.color = '#2d3436';
+                formMessage.style.border = '1px solid #FF6B6B';
+                formMessage.style.display = 'block';
+            } finally {
+                btnText.textContent = '🌿 Send Message';
+                btnSpinner.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
